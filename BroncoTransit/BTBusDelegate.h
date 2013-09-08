@@ -10,4 +10,6 @@
 
 @protocol BTBusDelegate <NSObject>
 
+- (void)busCoordinatesDidChange;
+    
 @end

@@ -8,14 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "BTBusDelegate.h"
 
 @interface BTBus : NSObject <MKAnnotation>
 
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, readonly, copy) NSString *subtitle;
+@property NSNumber *busId;
 
-
-- (id)initWithTitle:(NSString *)title coordinate:(CLLocationCoordinate2D)coordinate andSubtitle:(NSString *)subtitle;
+- (id)initWithDelegate:(id<BTBusDelegate>)del busId:(NSNumber *)busId andTitle:(NSString *)title;
+- (void)beginReceivingUpdates;
 
 @end

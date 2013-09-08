@@ -8,29 +8,30 @@
 
 #import "BTBus.h"
 
-@interface BTBus ()
+@interface BTBus () {
+    id<BTBusDelegate> delegate;
+}
 
 @end
 
 @implementation BTBus
 
-- (id)initWithTitle:(NSString *)title coordinate:(CLLocationCoordinate2D)coordinate andSubtitle:(NSString *)subtitle
+- (id)initWithDelegate:(id<BTBusDelegate>)del busId:(NSNumber *)busId andTitle:(NSString *)title
 {
     self = [super init];
     if (self) {
-        if (title) {
-            _title = title;
-        }
-        
-        if (coordinate.latitude && coordinate.longitude) {
-            _coordinate = coordinate;
-        }
-        
-        if (subtitle) {
-            _subtitle = subtitle;
-        }
+        delegate = del;
+        _busId = busId;
+        _title = title;
     }
     return self;
+}
+
+- (void)beginReceivingUpdates {
+    NSString *urlString = [NSString stringWithFormat:@"http://aead1.auxe.wmich.edu/BroncoTransit/xml/gps%@.xml", self.busId];
+    NSString *xml = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString] encoding:NSUTF8StringEncoding error:nil];
+    
+    NSLog(@"%@", xml);
 }
 
 @end

@@ -22,6 +22,8 @@
 		D0A67D8417DD0BDE00E271B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A67D6317DD0BDE00E271B4 /* UIKit.framework */; };
 		D0A67D8C17DD0BDE00E271B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0A67D8A17DD0BDE00E271B4 /* InfoPlist.strings */; };
 		D0A67D8E17DD0BDE00E271B4 /* BroncoTransitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A67D8D17DD0BDE00E271B4 /* BroncoTransitTests.m */; };
+		D0A67D9817DD0BED00E271B4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A67D9717DD0BED00E271B4 /* MapKit.framework */; };
+		D0A67D9B17DD0F3D00E271B4 /* BTBus.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A67D9A17DD0F3D00E271B4 /* BTBus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D031D82717DD203300CC119E /* BTBusDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTBusDelegate.h; sourceTree = "<group>"; };
 		D0A67D5C17DD0BDD00E271B4 /* BroncoTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BroncoTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A67D5F17DD0BDD00E271B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0A67D6117DD0BDD00E271B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,6 +58,9 @@
 		D0A67D8917DD0BDE00E271B4 /* BroncoTransitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BroncoTransitTests-Info.plist"; sourceTree = "<group>"; };
 		D0A67D8B17DD0BDE00E271B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0A67D8D17DD0BDE00E271B4 /* BroncoTransitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BroncoTransitTests.m; sourceTree = "<group>"; };
+		D0A67D9717DD0BED00E271B4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D0A67D9917DD0F3D00E271B4 /* BTBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTBus.h; sourceTree = "<group>"; };
+		D0A67D9A17DD0F3D00E271B4 /* BTBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTBus.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0A67D9817DD0BED00E271B4 /* MapKit.framework in Frameworks */,
 				D0A67D6217DD0BDD00E271B4 /* CoreGraphics.framework in Frameworks */,
 				D0A67D6417DD0BDE00E271B4 /* UIKit.framework in Frameworks */,
 				D0A67D6017DD0BDD00E271B4 /* Foundation.framework in Frameworks */,
@@ -103,6 +110,7 @@
 		D0A67D5E17DD0BDD00E271B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0A67D9717DD0BED00E271B4 /* MapKit.framework */,
 				D0A67D5F17DD0BDD00E271B4 /* Foundation.framework */,
 				D0A67D6117DD0BDD00E271B4 /* CoreGraphics.framework */,
 				D0A67D6317DD0BDE00E271B4 /* UIKit.framework */,
@@ -120,6 +128,9 @@
 				D0A67D7417DD0BDE00E271B4 /* Main_iPad.storyboard */,
 				D0A67D7717DD0BDE00E271B4 /* BTViewController.h */,
 				D0A67D7817DD0BDE00E271B4 /* BTViewController.m */,
+				D0A67D9917DD0F3D00E271B4 /* BTBus.h */,
+				D0A67D9A17DD0F3D00E271B4 /* BTBus.m */,
+				D031D82717DD203300CC119E /* BTBusDelegate.h */,
 				D0A67D7A17DD0BDE00E271B4 /* Images.xcassets */,
 				D0A67D6617DD0BDE00E271B4 /* Supporting Files */,
 			);
@@ -256,6 +267,7 @@
 			files = (
 				D0A67D7917DD0BDE00E271B4 /* BTViewController.m in Sources */,
 				D0A67D7017DD0BDE00E271B4 /* BTAppDelegate.m in Sources */,
+				D0A67D9B17DD0F3D00E271B4 /* BTBus.m in Sources */,
 				D0A67D6C17DD0BDE00E271B4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +481,7 @@
 				D0A67D9317DD0BDE00E271B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0A67D9417DD0BDE00E271B4 /* Build configuration list for PBXNativeTarget "BroncoTransitTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +490,7 @@
 				D0A67D9617DD0BDE00E271B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

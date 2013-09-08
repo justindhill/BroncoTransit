@@ -23,14 +23,14 @@
 {
     [super viewDidLoad];
     //MKPlacemark *pm = [[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(40, 50) addressDictionary:nil];
-    CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(42.2969195166667, -85.5679773333333);
-    BTBus *bus = [[BTBus alloc] initWithTitle:@"Brown bus" coordinate:loc andSubtitle:nil];
+    BTBus *bus = [[BTBus alloc] initWithDelegate:self busId:@9 andTitle:@"Brown bus"];
+    [bus beginReceivingUpdates];
     annotation = bus;
     //annotation = [[MKAnnotationView alloc] initWithAnnotation:bus reuseIdentifier:@"busMarker"];
     MKCoordinateRegion region = MKCoordinateRegionMake(bus.coordinate, MKCoordinateSpanMake(.01, .01));
     [map addAnnotation:bus];
     [map setRegion:region animated:YES];
-    [self performSelector:@selector(moveStuff) withObject:nil afterDelay:5];
+    [self performSelector:@selector(busCoordinatesDidChange) withObject:nil afterDelay:5];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -41,7 +41,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)moveStuff {
+- (void)busCoordinatesDidChange {
     NSLog(@"Ohai");
     CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(annotation.coordinate.latitude - .01, annotation.coordinate.longitude - .01);
     [UIView beginAnimations:nil context:NULL];

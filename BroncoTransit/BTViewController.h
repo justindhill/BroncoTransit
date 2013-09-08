@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "BTBusDelegate.h"
 
-@interface BTViewController : UIViewController
+@interface BTViewController : UIViewController <BTBusDelegate>
 
 @end
