@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D068128417DD9770003FEA1C /* BTSidePanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D068128317DD9770003FEA1C /* BTSidePanelViewController.m */; };
 		D0A67D6017DD0BDD00E271B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A67D5F17DD0BDD00E271B4 /* Foundation.framework */; };
 		D0A67D6217DD0BDD00E271B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A67D6117DD0BDD00E271B4 /* CoreGraphics.framework */; };
 		D0A67D6417DD0BDE00E271B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A67D6317DD0BDE00E271B4 /* UIKit.framework */; };
@@ -22,7 +23,6 @@
 		D0BD199817DD314500B0684A /* libTBXML-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D08A78BF17DD2E79001D9CB3 /* libTBXML-iOS.a */; };
 		D0BD19B217DD54CB00B0684A /* logo-brown.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BD19B017DD54CB00B0684A /* logo-brown.png */; };
 		D0BD19B317DD54CB00B0684A /* logo-brown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BD19B117DD54CB00B0684A /* logo-brown@2x.png */; };
-		D0BD19B717DD5B1100B0684A /* BTSidePanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BD19B517DD5B1100B0684A /* BTSidePanelViewController.m */; };
 		D0BD19BB17DD5E4000B0684A /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BD19BA17DD5E4000B0684A /* JASidePanelController.m */; };
 		D0BD19BE17DD5F6E00B0684A /* BTLeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BD19BD17DD5F6E00B0684A /* BTLeftMenuViewController.m */; };
 		D0BD19C117DD660400B0684A /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BD19C017DD660400B0684A /* UIViewController+JASidePanel.m */; };
@@ -76,6 +76,8 @@
 
 /* Begin PBXFileReference section */
 		D031D82717DD203300CC119E /* BTBusDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTBusDelegate.h; sourceTree = "<group>"; };
+		D068128217DD9770003FEA1C /* BTSidePanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSidePanelViewController.h; sourceTree = "<group>"; };
+		D068128317DD9770003FEA1C /* BTSidePanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSidePanelViewController.m; sourceTree = "<group>"; };
 		D08A78B317DD2E79001D9CB3 /* TBXML.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TBXML.xcodeproj; path = BroncoTransit/Frameworks/TBXML/TBXML.xcodeproj; sourceTree = "<group>"; };
 		D0A67D5C17DD0BDD00E271B4 /* BroncoTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BroncoTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A67D5F17DD0BDD00E271B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,8 +100,6 @@
 		D0A67D9A17DD0F3D00E271B4 /* BTBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTBus.m; sourceTree = "<group>"; };
 		D0BD19B017DD54CB00B0684A /* logo-brown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-brown.png"; sourceTree = "<group>"; };
 		D0BD19B117DD54CB00B0684A /* logo-brown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-brown@2x.png"; sourceTree = "<group>"; };
-		D0BD19B417DD5B1100B0684A /* BTSidePanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTSidePanelViewController.h; path = ../BTSidePanelViewController.h; sourceTree = "<group>"; };
-		D0BD19B517DD5B1100B0684A /* BTSidePanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTSidePanelViewController.m; path = ../BTSidePanelViewController.m; sourceTree = "<group>"; };
 		D0BD19B917DD5E4000B0684A /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JASidePanelController.h; path = BroncoTransit/JASidePanelController.h; sourceTree = "<group>"; };
 		D0BD19BA17DD5E4000B0684A /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JASidePanelController.m; path = BroncoTransit/JASidePanelController.m; sourceTree = "<group>"; };
 		D0BD19BC17DD5F6E00B0684A /* BTLeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLeftMenuViewController.h; sourceTree = "<group>"; };
@@ -190,10 +190,10 @@
 			children = (
 				D0A67D6E17DD0BDE00E271B4 /* BTAppDelegate.h */,
 				D0A67D6F17DD0BDE00E271B4 /* BTAppDelegate.m */,
+				D068128217DD9770003FEA1C /* BTSidePanelViewController.h */,
+				D068128317DD9770003FEA1C /* BTSidePanelViewController.m */,
 				D0A67D7717DD0BDE00E271B4 /* BTViewController.h */,
 				D0A67D7817DD0BDE00E271B4 /* BTViewController.m */,
-				D0BD19B417DD5B1100B0684A /* BTSidePanelViewController.h */,
-				D0BD19B517DD5B1100B0684A /* BTSidePanelViewController.m */,
 				D0BD19BC17DD5F6E00B0684A /* BTLeftMenuViewController.h */,
 				D0BD19BD17DD5F6E00B0684A /* BTLeftMenuViewController.m */,
 				D0A67D9917DD0F3D00E271B4 /* BTBus.h */,
@@ -351,7 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0BD19B717DD5B1100B0684A /* BTSidePanelViewController.m in Sources */,
+				D068128417DD9770003FEA1C /* BTSidePanelViewController.m in Sources */,
 				D0BD19C117DD660400B0684A /* UIViewController+JASidePanel.m in Sources */,
 				D0A67D7917DD0BDE00E271B4 /* BTViewController.m in Sources */,
 				D0BD19BB17DD5E4000B0684A /* JASidePanelController.m in Sources */,
