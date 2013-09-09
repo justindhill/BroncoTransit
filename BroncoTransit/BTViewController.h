@@ -10,6 +10,11 @@
 #import <MapKit/MapKit.h>
 #import "BTBusDelegate.h"
 
-@interface BTViewController : UIViewController <BTBusDelegate>
+@interface BTViewController : UIViewController <BTBusDelegate, MKMapViewDelegate, UIGestureRecognizerDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *resumeButtonOutlet;
+- (IBAction)resumeButton:(id)sender;
+- (void)didPan;
+
+- (void)switchRoute:(NSNumber *)busId withName:(NSString *)routeName;
 
 @end
