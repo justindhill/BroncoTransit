@@ -16,13 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ziY-DY-0I4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <gestureRecognizers/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6U-8f-NqR">
-                                <rect key="frame" x="0.0" y="525" width="103" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6U-8f-NqR">
+                                <rect key="frame" x="0.0" y="506" width="103" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                 <state key="normal" title="Resume"/>
@@ -32,13 +27,9 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="l6U-8f-NqR" secondAttribute="bottom" id="jAB-vO-3Bc"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gO7-ys-NQH"/>
                     <connections>
-                        <outlet property="map" destination="ziY-DY-0I4" id="fDz-1B-Bhf"/>
                         <outlet property="resumeButtonOutlet" destination="l6U-8f-NqR" id="Xc7-nP-L4D"/>
                     </connections>
                 </viewController>

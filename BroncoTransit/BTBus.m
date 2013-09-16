@@ -10,6 +10,7 @@
 
 @interface BTBus () {
     id<BTBusDelegate> delegate;
+    GMSMapView *owner;
     NSTimer *timer;
 }
 
@@ -17,13 +18,14 @@
 
 @implementation BTBus
 
-- (id)initWithDelegate:(id<BTBusDelegate>)del busId:(NSNumber *)busId andTitle:(NSString *)title
+- (id)initWithDelegate:(id<BTBusDelegate>)del map:(GMSMapView *)map busId:(NSNumber *)busId andTitle:(NSString *)title
 {
     self = [super init];
     if (self) {
         delegate = del;
         _busId = busId;
         _title = title;
+        owner = map;
     }
     return self;
 }
@@ -34,6 +36,7 @@
 }
 
 - (void)stopReceivingUpdates {
+    self.marker.map = nil;
     [timer invalidate];
 }
 
@@ -47,6 +50,15 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self setCoordinate:coord];
+            if (!self.marker) {
+                self.marker = [GMSMarker markerWithPosition:coord];
+                self.marker.animated = YES;
+                self.marker.icon = [UIImage imageNamed:[NSString stringWithFormat:@"logo-%@.png", self.color]];
+                self.marker.map = owner;
+            } else {
+                self.marker.position = coord;
+            }
+            
             [delegate busCoordinatesDidChange:self];
         });
     };

@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<array>
+		<dict>
+			<key>title</key>
+			<string>Brown</string>
+			<key>busId</key>
+			<real>9</real>
+			<key>stops</key>
+			<array>
+				<dict>
+					<key>label</key>
+					<string>Loading Zone</string>
+					<key>x</key>
+					<real>-85.617152000000004</real>
+					<key>y</key>
+					<real>42.284143</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley III—Eldridge/Fox</string>
+					<key>x</key>
+					<real>-85.618086000000005</real>
+					<key>y</key>
+					<real>42.290579999999999</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley III—Harrison/Stinson</string>
+					<key>x</key>
+					<real>-85.617870999999994</real>
+					<key>y</key>
+					<real>42.289530999999997</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley II- Eicher/LeFevre</string>
+					<key>x</key>
+					<real>-85.617076999999995</real>
+					<key>y</key>
+					<real>42.290247000000001</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley II- Garneau/Harvey</string>
+					<key>x</key>
+					<real>-85.617507000000003</real>
+					<key>y</key>
+					<real>42.291572000000002</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley I- Ackley/Shilling</string>
+					<key>x</key>
+					<real>-85.614889000000005</real>
+					<key>y</key>
+					<real>42.290658999999998</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley I- Britton/Hadley</string>
+					<key>x</key>
+					<real>-85.614484000000004</real>
+					<key>y</key>
+					<real>42.289476999999998</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Goldsworth Valley</string>
+					<key>x</key>
+					<real>-85.614878000000004</real>
+					<key>y</key>
+					<real>42.288491</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Bernhard Center</string>
+					<key>x</key>
+					<real>-85.612056999999993</real>
+					<key>y</key>
+					<real>42.28436</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Read Field H.</string>
+					<key>x</key>
+					<real>-85.607742999999999</real>
+					<key>y</key>
+					<real>42.283945000000003</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Little Three</string>
+					<key>x</key>
+					<real>-85.609063000000006</real>
+					<key>y</key>
+					<real>42.282640999999998</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Big 4</string>
+					<key>x</key>
+					<real>-85.611005000000006</real>
+					<key>y</key>
+					<real>42.281691000000002</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Waldo Library</string>
+					<key>x</key>
+					<real>-85.613151000000002</real>
+					<key>y</key>
+					<real>42.281818000000001</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Brown Hall</string>
+					<key>x</key>
+					<real>-85.614519999999999</real>
+					<key>y</key>
+					<real>42.279829999999997</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Miller Aud.</string>
+					<key>x</key>
+					<real>-85.616944000000004</real>
+					<key>y</key>
+					<real>42.278765999999997</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Western View Apts.</string>
+					<key>x</key>
+					<real>-85.619781000000003</real>
+					<key>y</key>
+					<real>42.280904999999997</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Loading Zone</string>
+					<key>x</key>
+					<real>-85.617152000000004</real>
+					<key>y</key>
+					<real>42.284143</real>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Gold</string>
+			<key>busId</key>
+			<real>7</real>
+			<key>stops</key>
+			<array>
+				<dict>
+					<key>label</key>
+					<string>Loading Zone</string>
+					<key>x</key>
+					<real>-85.617345999999998</real>
+					<key>y</key>
+					<real>42.284126999999998</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Western View Apts.</string>
+					<key>x</key>
+					<real>-85.620193999999998</real>
+					<key>y</key>
+					<real>42.280813000000002</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Miller Aud.</string>
+					<key>x</key>
+					<real>-85.616562000000002</real>
+					<key>y</key>
+					<real>42.278623000000003</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Moore Hall</string>
+					<key>x</key>
+					<real>-85.614024999999998</real>
+					<key>y</key>
+					<real>42.281056999999997</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Big 4</string>
+					<key>x</key>
+					<real>-85.612786</real>
+					<key>y</key>
+					<real>42.281596999999998</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Western Ave.</string>
+					<key>x</key>
+					<real>-85.608816000000004</real>
+					<key>y</key>
+					<real>42.282257999999999</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Reads Fieldhouse</string>
+					<key>x</key>
+					<real>-85.607336000000004</real>
+					<key>y</key>
+					<real>42.283810000000003</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Bernhard Center</string>
+					<key>x</key>
+					<real>-85.612195999999997</real>
+					<key>y</key>
+					<real>42.284342000000002</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Goldsworth Valley</string>
+					<key>x</key>
+					<real>-85.614459999999994</real>
+					<key>y</key>
+					<real>42.288224</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley II- Eicher/LeFevre</string>
+					<key>x</key>
+					<real>-85.617152000000004</real>
+					<key>y</key>
+					<real>42.290270999999997</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley II- Garneau/Harvey</string>
+					<key>x</key>
+					<real>-85.617581999999999</real>
+					<key>y</key>
+					<real>42.291445000000003</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley I- Ackley/Shilling</string>
+					<key>x</key>
+					<real>-85.614964000000001</real>
+					<key>y</key>
+					<real>42.290801999999999</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley I- Britton/Hadley</string>
+					<key>x</key>
+					<real>-85.614620000000002</real>
+					<key>y</key>
+					<real>42.289555999999997</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley III—Eldridge/Fox</string>
+					<key>x</key>
+					<real>-85.617979000000005</real>
+					<key>y</key>
+					<real>42.290447</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley III—Harrison/Stinson</string>
+					<key>x</key>
+					<real>-85.617721000000003</real>
+					<key>y</key>
+					<real>42.289558</real>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Oakland</string>
+			<key>busId</key>
+			<real>1</real>
+			<key>stops</key>
+			<array>
+				<dict>
+					<key>label</key>
+					<string>Loading Zone</string>
+					<key>x</key>
+					<real>-85.617163000000005</real>
+					<key>y</key>
+					<real>42.284179000000002</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Western View</string>
+					<key>x</key>
+					<real>-85.620215999999999</real>
+					<key>y</key>
+					<real>42.280794</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Miller Aud.</string>
+					<key>x</key>
+					<real>-85.616631999999996</real>
+					<key>y</key>
+					<real>42.278610999999998</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Moore Hall</string>
+					<key>x</key>
+					<real>-85.613901999999996</real>
+					<key>y</key>
+					<real>42.281111000000003</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Big 4</string>
+					<key>x</key>
+					<real>-85.612035000000006</real>
+					<key>y</key>
+					<real>42.281556000000002</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Elmwood/ Western Ave.</string>
+					<key>x</key>
+					<real>-85.609009</real>
+					<key>y</key>
+					<real>42.282007999999998</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Read Fieldhouse</string>
+					<key>x</key>
+					<real>-85.607346000000007</real>
+					<key>y</key>
+					<real>42.283856999999998</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Oliver St.</string>
+					<key>x</key>
+					<real>-85.600920000000002</real>
+					<key>y</key>
+					<real>42.283349000000001</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>CHHS (arrives)</string>
+					<key>x</key>
+					<real>-85.603452000000004</real>
+					<key>y</key>
+					<real>42.281500000000001</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>CHHS (departs)</string>
+					<key>x</key>
+					<real>-85.603194000000002</real>
+					<key>y</key>
+					<real>42.281564000000003</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Oliver St.</string>
+					<key>x</key>
+					<real>-85.600674999999995</real>
+					<key>y</key>
+					<real>42.282896999999998</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Read Fieldhouse</string>
+					<key>x</key>
+					<real>-85.607630999999998</real>
+					<key>y</key>
+					<real>42.283833999999999</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Elmwood Apt.</string>
+					<key>x</key>
+					<real>-85.611909999999995</real>
+					<key>y</key>
+					<real>42.279688999999998</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Miller Aud.</string>
+					<key>x</key>
+					<real>-85.616636999999997</real>
+					<key>y</key>
+					<real>42.278816999999997</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Western View Apts.</string>
+					<key>x</key>
+					<real>-85.619985</real>
+					<key>y</key>
+					<real>42.280805000000001</real>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Parkview I</string>
+			<key>busId</key>
+			<real>5</real>
+			<key>stops</key>
+			<array>
+				<dict>
+					<key>label</key>
+					<string>Loading Zone</string>
+					<key>x</key>
+					<real>-85.617292000000006</real>
+					<key>y</key>
+					<real>42.284182999999999</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Stadium Drive</string>
+					<key>x</key>
+					<real>-85.615339000000006</real>
+					<key>y</key>
+					<real>42.27561</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Parkview (arrives)</string>
+					<key>x</key>
+					<real>-85.640873999999997</real>
+					<key>y</key>
+					<real>42.254537999999997</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Parkview (departs)</string>
+					<key>x</key>
+					<real>-85.640574000000001</real>
+					<key>y</key>
+					<real>42.25403</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Archive on Howard</string>
+					<key>x</key>
+					<real>-85.606198000000006</real>
+					<key>y</key>
+					<real>42.274482999999996</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Stadium Dr. Apts.</string>
+					<key>x</key>
+					<real>-85.612291999999997</real>
+					<key>y</key>
+					<real>42.275633999999997</real>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Parkview II</string>
+			<key>busId</key>
+			<real>8</real>
+			<key>stops</key>
+			<array>
+				<dict>
+					<key>label</key>
+					<string>Loading Zone</string>
+					<key>x</key>
+					<real>-85.615939999999995</real>
+					<key>y</key>
+					<real>42.283912999999998</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Stadium Drive</string>
+					<key>x</key>
+					<real>-85.615339000000006</real>
+					<key>y</key>
+					<real>42.27561</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Parkview (arrives)</string>
+					<key>x</key>
+					<real>-85.640873999999997</real>
+					<key>y</key>
+					<real>42.254537999999997</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Parkview (departs)</string>
+					<key>x</key>
+					<real>-85.640401999999995</real>
+					<key>y</key>
+					<real>42.254379</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Archive on Howard</string>
+					<key>x</key>
+					<real>-85.606326999999993</real>
+					<key>y</key>
+					<real>42.274445</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Stadium Dr. Apts</string>
+					<key>x</key>
+					<real>-85.612077999999997</real>
+					<key>y</key>
+					<real>42.275841999999997</real>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</plist>
