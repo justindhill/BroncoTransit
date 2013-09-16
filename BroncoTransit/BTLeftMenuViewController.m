@@ -29,12 +29,15 @@
     return self;
 }
 
+- (NSArray *)routes {
+    BTAppDelegate *d = (BTAppDelegate *)[[UIApplication sharedApplication] delegate];
+    return d.routes;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    routeNames = @[@"Brown", @"Gold", @"Oakland", @"Parkview I", @"Parkview II"];
-    routeNumbers = @[@9, @7, @1, @5, @8];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView reloadData];
@@ -48,7 +51,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return self.routes.count;
 }
 
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
@@ -60,7 +63,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"routeMenu"];
     }
     
-    cell.textLabel.text = routeNames[indexPath.row];
+    NSDictionary *route = self.routes[indexPath.row];
+    cell.textLabel.text = route[@"title"];
     return cell;
 }
 
@@ -69,7 +73,7 @@
     UINavigationController *nav = (UINavigationController *)self.sidePanelController.centerPanel;
     BTViewController *mapController = (BTViewController *)nav.visibleViewController;
     
-    [mapController switchRoute:routeNumbers[indexPath.row] withName:routeNames[indexPath.row]];
+    [mapController switchRoute:@(indexPath.row)];
     [self.sidePanelController showCenterPanelAnimated:YES];
 }
 

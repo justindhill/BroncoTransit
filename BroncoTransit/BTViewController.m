@@ -11,7 +11,6 @@
 #import "BTBus.h"
 
 @interface BTViewController () {
-    GMSMapView *map;
     BTBus *annotation;
     BOOL shouldFocusPin;
 }
@@ -23,33 +22,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:42.2832 longitude:-85.6152 zoom:16];
-    map = [GMSMapView mapWithFrame:self.mapView.bounds camera:camera];
-    map.myLocationEnabled = YES;
-    self.view = map;
-    //[self.view addSubview:map];
-    //[self.view bringSubviewToFront:map];
-    
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:42.2832 longitude:-85.6152 zoom:17];
+    self.mapView.camera = camera;
+    self.mapView.myLocationEnabled = YES;
+    self.mapView.settings.rotateGestures = NO;
     self.navigationItem.title = @"Brown";
     
-    //BTBus *bus = [[BTBus alloc] initWithDelegate:self map:map busId:@9 andTitle:@"Brown"];
-    //[bus beginReceivingUpdates];
-    //annotation = bus;
-    
-    // add pan gesture recognizer to the map view
-    //UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didPan)];
-//    pan.delegate = self;
-//    [map addGestureRecognizer:pan];
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didPan)];
+    pan.delegate = self;
+    [self.mapView addGestureRecognizer:pan];
     
     shouldFocusPin = YES;
-    //self.resumeButtonOutlet.hidden = YES;
-    //[self.view bringSubviewToFront:self.resumeButtonOutlet];
+    self.resumeButtonOutlet.hidden = YES;
+    
+    // the brown route
+    [self switchRoute:@0];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)busCoordinatesDidChange:(id)sender {
@@ -57,14 +49,7 @@
     NSLog(@"%@: got new bus coordinates: %f, %f", src.title, annotation.coordinate.latitude, annotation.coordinate.longitude);
     
     if (shouldFocusPin) {
-//        [UIView beginAnimations:nil context:NULL];
-//        [UIView setAnimationDuration:0.25];
-//        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-        
-        [map animateToLocation:annotation.coordinate];
-        //[map setCenterCoordinate:annotation.coordinate];
-        
-//        [UIView commitAnimations];
+        [self.mapView animateToLocation:annotation.coordinate];
     }
 }
 
@@ -83,13 +68,16 @@
     self.resumeButtonOutlet.hidden = YES;
 }
 
-- (void)switchRoute:(NSNumber *)busId withName:(NSString *)routeName {
+- (void)switchRoute:(NSNumber *)routeIndex {
+    BTAppDelegate *d = (BTAppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSDictionary *route = d.routes[routeIndex.intValue];
     [annotation stopReceivingUpdates];
     annotation = nil;
     
-    BTBus *bus = [[BTBus alloc] initWithDelegate:self map:map busId:busId andTitle:routeName];
+    BTBus *bus = [[BTBus alloc] initWithDelegate:self map:self.mapView andRouteInfo:route];
     [bus beginReceivingUpdates];
-    self.navigationItem.title = bus.title;
+    self.navigationItem.title = route[@"title"];
+    shouldFocusPin = YES;
     annotation = bus;
 }
 @end

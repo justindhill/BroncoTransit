@@ -16,26 +16,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6U-8f-NqR">
-                                <rect key="frame" x="0.0" y="506" width="103" height="62"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGZ-9M-78Y" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKu-1G-mky">
+                                <rect key="frame" x="0.0" y="505" width="105" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="Resume"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="aHJ-4w-Ccy"/>
+                                    <constraint firstAttribute="width" constant="105" id="eWi-lj-gh8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Resume">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="resumeButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OiJ-dV-v25"/>
+                                    <action selector="resumeButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tG4-0q-6iE"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="sKu-1G-mky" secondAttribute="bottom" id="4v2-jy-4TB"/>
+                            <constraint firstItem="XGZ-9M-78Y" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="FPz-6f-Vci"/>
+                            <constraint firstItem="XGZ-9M-78Y" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="I4E-P9-9UZ"/>
+                            <constraint firstAttribute="bottom" secondItem="XGZ-9M-78Y" secondAttribute="bottom" id="JfR-Wc-LdQ"/>
+                            <constraint firstAttribute="trailing" secondItem="XGZ-9M-78Y" secondAttribute="trailing" id="OPv-h3-0Yu"/>
+                            <constraint firstItem="sKu-1G-mky" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="gPN-eM-1Q6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gO7-ys-NQH"/>
                     <connections>
-                        <outlet property="resumeButtonOutlet" destination="l6U-8f-NqR" id="Xc7-nP-L4D"/>
+                        <outlet property="mapView" destination="XGZ-9M-78Y" id="CR4-sN-QkR"/>
+                        <outlet property="resumeButtonOutlet" destination="sKu-1G-mky" id="eZe-G9-itr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144" y="242"/>
+            <point key="canvasLocation" x="1144" y="227"/>
         </scene>
         <!--Side Panel View Controller-->
         <scene sceneID="e1x-Lh-thf">

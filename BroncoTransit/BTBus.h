@@ -7,21 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
 #import <GoogleMaps/GoogleMaps.h>
 #import "BTBusDelegate.h"
+#import "BTAppDelegate.h"
 #import "TBXML.h"
 
-@interface BTBus : NSObject <MKAnnotation>
+@interface BTBus : NSObject
 
 @property (nonatomic) CLLocationCoordinate2D coordinate;
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, readonly, copy) NSString *subtitle;
 @property (nonatomic, strong) GMSMarker *marker;
-@property NSNumber *busId;
+@property (strong) NSDictionary *routeInfo;
+@property (readonly) NSString *title;
 @property (readonly) NSString *color;
 
-- (id)initWithDelegate:(id<BTBusDelegate>)del map:(GMSMapView *)map busId:(NSNumber *)busId andTitle:(NSString *)title;
+- (id)initWithDelegate:(id<BTBusDelegate>)del map:(GMSMapView *)map andRouteInfo:(NSDictionary *)routeInfo;
 - (void)beginReceivingUpdates;
 - (void)getPositionUpdate;
 - (void)stopReceivingUpdates;

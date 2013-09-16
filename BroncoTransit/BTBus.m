@@ -18,13 +18,13 @@
 
 @implementation BTBus
 
-- (id)initWithDelegate:(id<BTBusDelegate>)del map:(GMSMapView *)map busId:(NSNumber *)busId andTitle:(NSString *)title
+
+- (id)initWithDelegate:(id<BTBusDelegate>)del map:(GMSMapView *)map andRouteInfo:(NSDictionary *)routeInfo;
 {
     self = [super init];
     if (self) {
         delegate = del;
-        _busId = busId;
-        _title = title;
+        _routeInfo = routeInfo;
         owner = map;
     }
     return self;
@@ -43,7 +43,7 @@
 - (void)getPositionUpdate {
     dispatch_queue_t globalConcurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     void (^fetch)(void) = ^{
-        NSString *urlString = [NSString stringWithFormat:@"http://aead1.auxe.wmich.edu/BroncoTransit/xml/gps%@.xml", self.busId];
+        NSString *urlString = [NSString stringWithFormat:@"http://aead1.auxe.wmich.edu/BroncoTransit/xml/gps%@.xml", self.routeInfo[@"busId"]];
         NSString *xml = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString] encoding:NSUTF8StringEncoding error:nil];
         
         CLLocationCoordinate2D coord = [self coordinateFromXml:xml];
@@ -76,7 +76,7 @@
 }
 
 - (NSString *)color {
-    switch (self.busId.intValue) {
+    switch ([self.routeInfo[@"busId"] intValue]) {
         case 9:
             return @"brown";
         case 7:

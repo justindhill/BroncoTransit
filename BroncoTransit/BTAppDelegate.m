@@ -15,6 +15,7 @@
 {
     // Override point for customization after application launch.
     [GMSServices provideAPIKey:@"AIzaSyD4QUAhpCENkXmjCLtgKXgEotAMaRyJ-oQ"];
+    self.routes = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"routes" ofType:@"plist"]];
     return YES;
 }
 							
