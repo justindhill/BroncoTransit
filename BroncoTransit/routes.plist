@@ -151,7 +151,7 @@
 			<key>title</key>
 			<string>Gold</string>
 			<key>busId</key>
-			<real>7</real>
+			<real>4</real>
 			<key>stops</key>
 			<array>
 				<dict>
@@ -516,6 +516,72 @@
 					<real>-85.612077999999997</real>
 					<key>y</key>
 					<real>42.275841999999997</real>
+				</dict>
+			</array>
+		</dict>
+
+		<dict>
+			<key>title</key>
+			<string>Valley Express</string>
+			<key>busId</key>
+			<real>3</real>
+			<key>stops</key>
+			<array>
+				<dict>
+					<key>label</key>
+					<string>Loading Zone</string>
+					<key>x</key>
+					<real>-85.616776999999999</real>
+					<key>y</key>
+					<real>42.284342000000002</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley III—Eldridge Fox</string>
+					<key>x</key>
+					<real>-85.618031999999999</real>
+					<key>y</key>
+					<real>42.290556000000002</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley III—Harrison/Stinson</string>
+					<key>x</key>
+					<real>-85.617732000000004</real>
+					<key>y</key>
+					<real>42.289389999999997</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley II- Eicher/LeFevre</string>
+					<key>x</key>
+					<real>-85.617236000000005</real>
+					<key>y</key>
+					<real>42.290227000000002</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley II- Garneau/Harvey</string>
+					<key>x</key>
+					<real>-85.617779999999996</real>
+					<key>y</key>
+					<real>42.29166</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley I- Ackley/Shilling</string>
+					<key>x</key>
+					<real>-85.615039999999993</real>
+					<key>y</key>
+					<real>42.29083</real>
+				</dict>
+				<dict>
+					<key>label</key>
+					<string>Valley I- Britton/Hadley</string>
+					<key>x</key>
+					<real>-85.614469999999997</real>
+					<key>y</key>
+					<real>42.289540000000002</real>
 				</dict>
 			</array>
 		</dict>

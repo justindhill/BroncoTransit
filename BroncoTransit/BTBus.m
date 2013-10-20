@@ -52,7 +52,6 @@
             [self setCoordinate:coord];
             if (!self.marker) {
                 self.marker = [GMSMarker markerWithPosition:coord];
-                self.marker.animated = YES;
                 self.marker.icon = [UIImage imageNamed:[NSString stringWithFormat:@"logo-%@.png", self.color]];
                 self.marker.map = owner;
             } else {
@@ -79,7 +78,7 @@
     switch ([self.routeInfo[@"busId"] intValue]) {
         case 9:
             return @"brown";
-        case 7:
+        case 4:
             return @"yellow";
         case 1:
             return @"blue";
@@ -87,6 +86,8 @@
             return @"red";
         case 8:
             return @"red";
+        case 3:
+            return @"purple";
         default:
             return @"brown";
     }

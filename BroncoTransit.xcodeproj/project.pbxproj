@@ -19,8 +19,8 @@
 		D011509E17DEE51300266FC1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D011509217DEE51300266FC1 /* OpenGLES.framework */; };
 		D011509F17DEE51300266FC1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D011509317DEE51300266FC1 /* QuartzCore.framework */; };
 		D01150A017DEE51300266FC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D011509417DEE51300266FC1 /* SystemConfiguration.framework */; };
-		D01150A217DEE56700266FC1 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01150A117DEE56700266FC1 /* GoogleMaps.framework */; };
-		D01150A417DEE57600266FC1 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D01150A317DEE57600266FC1 /* GoogleMaps.bundle */; };
+		D06013DF181378E70031A0BB /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06013DE181378E60031A0BB /* GoogleMaps.framework */; };
+		D06013E11813790F0031A0BB /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D06013E01813790F0031A0BB /* GoogleMaps.bundle */; };
 		D068128417DD9770003FEA1C /* BTSidePanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D068128317DD9770003FEA1C /* BTSidePanelViewController.m */; };
 		D0A67D6017DD0BDD00E271B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A67D5F17DD0BDD00E271B4 /* Foundation.framework */; };
 		D0A67D6217DD0BDD00E271B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A67D6117DD0BDD00E271B4 /* CoreGraphics.framework */; };
@@ -102,9 +102,9 @@
 		D011509217DEE51300266FC1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		D011509317DEE51300266FC1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D011509417DEE51300266FC1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		D01150A117DEE56700266FC1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		D01150A317DEE57600266FC1 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		D031D82717DD203300CC119E /* BTBusDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTBusDelegate.h; sourceTree = "<group>"; };
+		D06013DE181378E60031A0BB /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		D06013E01813790F0031A0BB /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		D068128217DD9770003FEA1C /* BTSidePanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSidePanelViewController.h; sourceTree = "<group>"; };
 		D068128317DD9770003FEA1C /* BTSidePanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSidePanelViewController.m; sourceTree = "<group>"; };
 		D08A78B317DD2E79001D9CB3 /* TBXML.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TBXML.xcodeproj; path = BroncoTransit/Frameworks/TBXML/TBXML.xcodeproj; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 				D011509817DEE51300266FC1 /* CoreText.framework in Frameworks */,
 				D011509917DEE51300266FC1 /* GLKit.framework in Frameworks */,
 				D011509A17DEE51300266FC1 /* ImageIO.framework in Frameworks */,
-				D01150A217DEE56700266FC1 /* GoogleMaps.framework in Frameworks */,
+				D06013DF181378E70031A0BB /* GoogleMaps.framework in Frameworks */,
 				D011509B17DEE51300266FC1 /* libc++.dylib in Frameworks */,
 				D011509C17DEE51300266FC1 /* libicucore.dylib in Frameworks */,
 				D011509D17DEE51300266FC1 /* libz.dylib in Frameworks */,
@@ -218,8 +218,8 @@
 		D0A67D5E17DD0BDD00E271B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D01150A317DEE57600266FC1 /* GoogleMaps.bundle */,
-				D01150A117DEE56700266FC1 /* GoogleMaps.framework */,
+				D06013E01813790F0031A0BB /* GoogleMaps.bundle */,
+				D06013DE181378E60031A0BB /* GoogleMaps.framework */,
 				D011508917DEE51200266FC1 /* AVFoundation.framework */,
 				D011508A17DEE51200266FC1 /* CoreData.framework */,
 				D011508B17DEE51200266FC1 /* CoreLocation.framework */,
@@ -392,10 +392,10 @@
 				D0BD19D117DD710800B0684A /* logo-purple.png in Resources */,
 				D0A67D7B17DD0BDE00E271B4 /* Images.xcassets in Resources */,
 				D0A67D7317DD0BDE00E271B4 /* Main_iPhone.storyboard in Resources */,
+				D06013E11813790F0031A0BB /* GoogleMaps.bundle in Resources */,
 				D0BD19CA17DD710800B0684A /* logo-purple@2x.png in Resources */,
 				D0D5E66917E6A6120092A122 /* routes.plist in Resources */,
 				D0BD19CB17DD710800B0684A /* logo-red@2x.png in Resources */,
-				D01150A417DEE57600266FC1 /* GoogleMaps.bundle in Resources */,
 				D0A67D6A17DD0BDE00E271B4 /* InfoPlist.strings in Resources */,
 				D0BD19CF17DD710800B0684A /* logo-yellow.png in Resources */,
 				D0BD19B317DD54CB00B0684A /* logo-brown@2x.png in Resources */,
@@ -540,6 +540,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/justin/Desktop/BroncoTransit,
+					/Users/justin/Development/BroncoTransit,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BroncoTransit/BroncoTransit-Prefix.pch";
@@ -559,6 +560,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/justin/Desktop/BroncoTransit,
+					/Users/justin/Development/BroncoTransit,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BroncoTransit/BroncoTransit-Prefix.pch";

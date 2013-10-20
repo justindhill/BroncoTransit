@@ -41,15 +41,31 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView reloadData];
-	// Do any additional setup after loading the view.
+    
+    self.tableView.tableHeaderView = self.headerView;
 }
 
-- (void)didReceiveMemoryWarning
+- (UIView *)headerView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    CGRect f = self.view.frame;
+    f.size.height = 64.;
+    
+    UIView *header = [[UIView alloc] initWithFrame:f];
+    
+    // the label needs to be centered in 80% the width of the frame because
+    // of the cutoff from the center panel
+    f.size.width *= .8f;
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:f];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = @"Routes";
+    label.font = [UIFont fontWithName:@"HelveticaNeue" size:22.0];
+    [header addSubview:label];
+    
+    return header;
 }
 
+#pragma mark - TableView data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.routes.count;
 }
@@ -61,6 +77,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"routeMenu"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"routeMenu"];
+        cell.backgroundColor = [UIColor clearColor];
     }
     
     NSDictionary *route = self.routes[indexPath.row];
@@ -68,7 +85,7 @@
     return cell;
 }
 
-
+#pragma mark - TableView delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UINavigationController *nav = (UINavigationController *)self.sidePanelController.centerPanel;
     BTViewController *mapController = (BTViewController *)nav.visibleViewController;

@@ -19,29 +19,34 @@
 
 @implementation BTViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // set up map, focused on Kalamazoo, MI
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:42.2832 longitude:-85.6152 zoom:17];
     self.mapView.camera = camera;
     self.mapView.myLocationEnabled = YES;
     self.mapView.settings.rotateGestures = NO;
     self.navigationItem.title = @"Brown";
     
+    [self setNeedsStatusBarAppearanceUpdate];
+    
+    // navigation controller
+    self.navigationController.navigationBar.barTintColor = RGBA(51., 25., 0., 1.);
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor] };
+    
+    // pan recognizer
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didPan)];
     pan.delegate = self;
     [self.mapView addGestureRecognizer:pan];
     
+    // defaults
     shouldFocusPin = YES;
     self.resumeButtonOutlet.hidden = YES;
     
     // the brown route
     [self switchRoute:@0];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
 }
 
 - (void)busCoordinatesDidChange:(id)sender {
