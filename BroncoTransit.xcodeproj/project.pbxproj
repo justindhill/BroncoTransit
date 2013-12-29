@@ -539,12 +539,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/justin/Desktop/BroncoTransit,
-					/Users/justin/Development/BroncoTransit,
+					"${SRCROOT}/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BroncoTransit/BroncoTransit-Prefix.pch";
-				"HEADER_SEARCH_PATHS[arch=*]" = "${SRCROOT}/**";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"${SRCROOT}",
+					"${SRCROOT}/BroncoTransit/Frameworks/TBXML/TBXML-headers",
+				);
 				INFOPLIST_FILE = "BroncoTransit/BroncoTransit-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -559,12 +562,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/justin/Desktop/BroncoTransit,
-					/Users/justin/Development/BroncoTransit,
+					"${SRCROOT}/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BroncoTransit/BroncoTransit-Prefix.pch";
-				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "BroncoTransit/BroncoTransit-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

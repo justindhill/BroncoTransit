@@ -7,6 +7,7 @@
 //
 
 #import "BTBus.h"
+#import "TBXML.h"
 
 @interface BTBus () {
     id<BTBusDelegate> delegate;

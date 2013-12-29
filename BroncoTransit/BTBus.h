@@ -10,7 +10,6 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "BTBusDelegate.h"
 #import "BTAppDelegate.h"
-#import "TBXML.h"
 
 @interface BTBus : NSObject
 
