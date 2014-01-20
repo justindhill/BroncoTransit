@@ -9,10 +9,17 @@
 #import <UIKit/UIKit.h>
 #import <GoogleMaps/GoogleMaps.h>
 #import "BTBusDelegate.h"
+#import "AMBlurView.h"
+#import "BTRoute.h"
 
 @interface BTViewController : UIViewController <BTBusDelegate, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *resumeButtonOutlet;
+@property (weak, nonatomic) IBOutlet UILabel *stopNameLabel;
+@property (weak, nonatomic) IBOutlet AMBlurView *distanceContainer;
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
+
+@property (weak, nonatomic) BTRoute *currentRoute;
+
 - (IBAction)resumeButton:(id)sender;
 - (void)didPan;
 

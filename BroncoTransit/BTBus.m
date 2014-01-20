@@ -7,7 +7,8 @@
 //
 
 #import "BTBus.h"
-#import "TBXML.h"
+#import "BTRoute.h"
+#import <TBXML.h>
 
 @interface BTBus () {
     id<BTBusDelegate> delegate;
@@ -20,12 +21,12 @@
 @implementation BTBus
 
 
-- (id)initWithDelegate:(id<BTBusDelegate>)del map:(GMSMapView *)map andRouteInfo:(NSDictionary *)routeInfo;
+- (id)initWithDelegate:(id<BTBusDelegate>)del map:(GMSMapView *)map andRoute:(BTRoute *)route;
 {
     self = [super init];
     if (self) {
         delegate = del;
-        _routeInfo = routeInfo;
+        _route = route;
         owner = map;
     }
     return self;
@@ -44,7 +45,7 @@
 - (void)getPositionUpdate {
     dispatch_queue_t globalConcurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     void (^fetch)(void) = ^{
-        NSString *urlString = [NSString stringWithFormat:@"http://aead1.auxe.wmich.edu/BroncoTransit/xml/gps%@.xml", self.routeInfo[@"busId"]];
+        NSString *urlString = [NSString stringWithFormat:@"http://aead1.auxe.wmich.edu/BroncoTransit/xml/gps%ld.xml", (long)self.route.busId];
         NSString *xml = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString] encoding:NSUTF8StringEncoding error:nil];
         
         CLLocationCoordinate2D coord = [self coordinateFromXml:xml];
@@ -53,7 +54,7 @@
             [self setCoordinate:coord];
             if (!self.marker) {
                 self.marker = [GMSMarker markerWithPosition:coord];
-                self.marker.icon = [UIImage imageNamed:[NSString stringWithFormat:@"logo-%@.png", self.color]];
+                self.marker.icon = self.route.icon;
                 self.marker.map = owner;
             } else {
                 self.marker.position = coord;
@@ -75,23 +76,5 @@
     return CLLocationCoordinate2DMake([lat doubleValue], [longitude doubleValue]);
 }
 
-- (NSString *)color {
-    switch ([self.routeInfo[@"busId"] intValue]) {
-        case 9:
-            return @"brown";
-        case 4:
-            return @"yellow";
-        case 1:
-            return @"blue";
-        case 5:
-            return @"red";
-        case 8:
-            return @"red";
-        case 3:
-            return @"purple";
-        default:
-            return @"brown";
-    }
-}
 
 @end

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yL1-Qa-VSB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B3116" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yL1-Qa-VSB">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKu-1G-mky">
-                                <rect key="frame" x="0.0" y="505" width="105" height="63"/>
+                                <rect key="frame" x="0.0" y="461" width="105" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="aHJ-4w-Ccy"/>
@@ -35,21 +35,59 @@
                                     <action selector="resumeButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tG4-0q-6iE"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nm-kF-mB4" customClass="AMBlurView">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOSEST STOP TO YOU" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8W-cG-1qJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Eup-qo-nXq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bernhard Center (750ft)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWD-le-CfP">
+                                        <rect key="frame" x="0.0" y="18" width="320" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="UWD-le-CfP" secondAttribute="trailing" id="5eT-bs-caE"/>
+                                    <constraint firstItem="UWD-le-CfP" firstAttribute="leading" secondItem="4nm-kF-mB4" secondAttribute="leading" id="BqC-Bc-cKg"/>
+                                    <constraint firstItem="T8W-cG-1qJ" firstAttribute="leading" secondItem="4nm-kF-mB4" secondAttribute="leading" id="OmD-mi-raq"/>
+                                    <constraint firstItem="T8W-cG-1qJ" firstAttribute="top" secondItem="4nm-kF-mB4" secondAttribute="top" id="VXt-Ot-naa"/>
+                                    <constraint firstAttribute="height" constant="44" id="WSb-Ij-n0b"/>
+                                    <constraint firstAttribute="trailing" secondItem="T8W-cG-1qJ" secondAttribute="trailing" id="gBd-5F-xve"/>
+                                    <constraint firstItem="UWD-le-CfP" firstAttribute="top" secondItem="T8W-cG-1qJ" secondAttribute="bottom" constant="-2" id="pWv-se-Xtf"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="sKu-1G-mky" secondAttribute="bottom" id="4v2-jy-4TB"/>
+                            <constraint firstAttribute="bottom" secondItem="sKu-1G-mky" secondAttribute="bottom" constant="44" id="4v2-jy-4TB"/>
+                            <constraint firstAttribute="trailing" secondItem="4nm-kF-mB4" secondAttribute="trailing" id="DB5-xp-e0q"/>
                             <constraint firstItem="XGZ-9M-78Y" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="FPz-6f-Vci"/>
                             <constraint firstItem="XGZ-9M-78Y" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="I4E-P9-9UZ"/>
                             <constraint firstAttribute="bottom" secondItem="XGZ-9M-78Y" secondAttribute="bottom" id="JfR-Wc-LdQ"/>
                             <constraint firstAttribute="trailing" secondItem="XGZ-9M-78Y" secondAttribute="trailing" id="OPv-h3-0Yu"/>
+                            <constraint firstAttribute="bottom" secondItem="4nm-kF-mB4" secondAttribute="bottom" id="UYS-3x-ibl"/>
                             <constraint firstItem="sKu-1G-mky" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="gPN-eM-1Q6"/>
+                            <constraint firstItem="4nm-kF-mB4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="mbl-LD-zZo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gO7-ys-NQH"/>
                     <connections>
+                        <outlet property="distanceContainer" destination="4nm-kF-mB4" id="36X-sG-2NQ"/>
                         <outlet property="mapView" destination="XGZ-9M-78Y" id="CR4-sN-QkR"/>
                         <outlet property="resumeButtonOutlet" destination="sKu-1G-mky" id="eZe-G9-itr"/>
+                        <outlet property="stopNameLabel" destination="UWD-le-CfP" id="RNw-De-pny"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -95,7 +133,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="ZQ9-EU-aq1" id="kM3-sQ-N0T"/>
+                        <outlet property="tableView" destination="ZQ9-EU-aq1" id="Vqj-AA-t48"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xoF-kJ-VLM" userLabel="First Responder" sceneMemberID="firstResponder"/>

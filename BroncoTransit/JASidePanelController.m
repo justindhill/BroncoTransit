@@ -430,30 +430,6 @@ static char ja_kvoContext;
     }
 }
 
-#pragma mark - Panel freezing
-
-- (void)_freezeCenterPanel
-{
-    _centerPanelScreenshot = [[UIScreen mainScreen] snapshotViewAfterScreenUpdates:NO];
-    [self.centerPanelContainer addSubview:_centerPanelScreenshot];
-    [self setNeedsStatusBarAppearanceUpdate];
-}
-
-- (void)_unfreezeCenterPanel
-{
-    [_centerPanelScreenshot removeFromSuperview];
-    _centerPanelScreenshot = nil;
-    [self setNeedsStatusBarAppearanceUpdate];
-}
-
-- (BOOL)prefersStatusBarHidden {
-    if (_centerPanelScreenshot) {
-        return YES;
-    } else {
-        return NO;
-    }
-}
-
 #pragma mark - Panel Buttons
 
 - (void)_placeButtonForLeftPanel {
@@ -535,10 +511,6 @@ static char ja_kvoContext;
                 [self _loadLeftPanel];
             } else if(frame.origin.x < 0.0f) {
                 [self _loadRightPanel];
-            }
-            
-            if (sender.state == UIGestureRecognizerStateBegan) {
-                [self _freezeCenterPanel];
             }
         }
         
@@ -854,10 +826,6 @@ static char ja_kvoContext;
     self.state = JASidePanelLeftVisible;
     [self _loadLeftPanel];
     
-    if (!(_centerPanelScreenshot)) {
-        [self _freezeCenterPanel];
-    }
-    
     [self _adjustCenterFrame];
     
     if (animated) {
@@ -879,10 +847,6 @@ static char ja_kvoContext;
 - (void)_showRightPanel:(BOOL)animated bounce:(BOOL)shouldBounce {
     self.state = JASidePanelRightVisible;
     [self _loadRightPanel];
-    
-    if (!(_centerPanelScreenshot)) {
-        [self _freezeCenterPanel];
-    }
     
     [self _adjustCenterFrame];
     
@@ -912,7 +876,6 @@ static char ja_kvoContext;
             self.leftPanelContainer.hidden = YES;
             self.rightPanelContainer.hidden = YES;
             [self _unloadPanels];
-            [self _unfreezeCenterPanel];
         }];
     } else {
         self.centerPanelContainer.frame = _centerPanelRestingFrame;	
@@ -920,7 +883,6 @@ static char ja_kvoContext;
         if (self.style == JASidePanelMultipleActive || self.pushesSidePanels) {
             [self _layoutSideContainers:NO duration:0.0f];
         }
-        [self _unfreezeCenterPanel];
         self.leftPanelContainer.hidden = YES;
         self.rightPanelContainer.hidden = YES;
         [self _unloadPanels];

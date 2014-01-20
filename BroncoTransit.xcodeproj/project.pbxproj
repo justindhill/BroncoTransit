@@ -49,6 +49,10 @@
 		D0BD19D017DD710800B0684A /* logo-red.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BD19C817DD710800B0684A /* logo-red.png */; };
 		D0BD19D117DD710800B0684A /* logo-purple.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BD19C917DD710800B0684A /* logo-purple.png */; };
 		D0D5E66917E6A6120092A122 /* routes.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0D5E66817E6A6120092A122 /* routes.plist */; };
+		FC3ACB17188CA22F00A31FAF /* AMBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3ACB16188CA22F00A31FAF /* AMBlurView.m */; };
+		FC3ACB1C188CA93C00A31FAF /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3ACB1B188CA93C00A31FAF /* Reveal.framework */; };
+		FC3ACB1F188CB79000A31FAF /* BTRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3ACB1E188CB79000A31FAF /* BTRoute.m */; };
+		FC3ACB25188CB9A900A31FAF /* BTStop.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3ACB24188CB9A900A31FAF /* BTStop.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +148,13 @@
 		D0BD19C817DD710800B0684A /* logo-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-red.png"; sourceTree = "<group>"; };
 		D0BD19C917DD710800B0684A /* logo-purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-purple.png"; sourceTree = "<group>"; };
 		D0D5E66817E6A6120092A122 /* routes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = routes.plist; sourceTree = "<group>"; };
+		FC3ACB15188CA22F00A31FAF /* AMBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMBlurView.h; path = BroncoTransit/AMBlurView.h; sourceTree = "<group>"; };
+		FC3ACB16188CA22F00A31FAF /* AMBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMBlurView.m; path = BroncoTransit/AMBlurView.m; sourceTree = "<group>"; };
+		FC3ACB1B188CA93C00A31FAF /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		FC3ACB1D188CB79000A31FAF /* BTRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRoute.h; sourceTree = "<group>"; };
+		FC3ACB1E188CB79000A31FAF /* BTRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRoute.m; sourceTree = "<group>"; };
+		FC3ACB23188CB9A900A31FAF /* BTStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTStop.h; sourceTree = "<group>"; };
+		FC3ACB24188CB9A900A31FAF /* BTStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTStop.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +169,7 @@
 				D011509917DEE51300266FC1 /* GLKit.framework in Frameworks */,
 				D011509A17DEE51300266FC1 /* ImageIO.framework in Frameworks */,
 				D06013DF181378E70031A0BB /* GoogleMaps.framework in Frameworks */,
+				FC3ACB1C188CA93C00A31FAF /* Reveal.framework in Frameworks */,
 				D011509B17DEE51300266FC1 /* libc++.dylib in Frameworks */,
 				D011509C17DEE51300266FC1 /* libicucore.dylib in Frameworks */,
 				D011509D17DEE51300266FC1 /* libz.dylib in Frameworks */,
@@ -178,6 +190,8 @@
 		D068127D17DD91B0003FEA1C /* Third-party classes */ = {
 			isa = PBXGroup;
 			children = (
+				FC3ACB15188CA22F00A31FAF /* AMBlurView.h */,
+				FC3ACB16188CA22F00A31FAF /* AMBlurView.m */,
 				D0BD19B917DD5E4000B0684A /* JASidePanelController.h */,
 				D0BD19BA17DD5E4000B0684A /* JASidePanelController.m */,
 				D0BD19BF17DD660400B0684A /* UIViewController+JASidePanel.h */,
@@ -200,6 +214,8 @@
 		D0A67D5317DD0BDD00E271B4 = {
 			isa = PBXGroup;
 			children = (
+				FC3ACB23188CB9A900A31FAF /* BTStop.h */,
+				FC3ACB24188CB9A900A31FAF /* BTStop.m */,
 				D0A67D6517DD0BDE00E271B4 /* BroncoTransit */,
 				D068127D17DD91B0003FEA1C /* Third-party classes */,
 				D0A67D5E17DD0BDD00E271B4 /* Frameworks */,
@@ -218,6 +234,7 @@
 		D0A67D5E17DD0BDD00E271B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC3ACB1B188CA93C00A31FAF /* Reveal.framework */,
 				D06013E01813790F0031A0BB /* GoogleMaps.bundle */,
 				D06013DE181378E60031A0BB /* GoogleMaps.framework */,
 				D011508917DEE51200266FC1 /* AVFoundation.framework */,
@@ -251,6 +268,8 @@
 				D068128317DD9770003FEA1C /* BTSidePanelViewController.m */,
 				D0A67D7717DD0BDE00E271B4 /* BTViewController.h */,
 				D0A67D7817DD0BDE00E271B4 /* BTViewController.m */,
+				FC3ACB1D188CB79000A31FAF /* BTRoute.h */,
+				FC3ACB1E188CB79000A31FAF /* BTRoute.m */,
 				D0BD19BC17DD5F6E00B0684A /* BTLeftMenuViewController.h */,
 				D0BD19BD17DD5F6E00B0684A /* BTLeftMenuViewController.m */,
 				D0A67D9917DD0F3D00E271B4 /* BTBus.h */,
@@ -412,13 +431,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D068128417DD9770003FEA1C /* BTSidePanelViewController.m in Sources */,
+				FC3ACB17188CA22F00A31FAF /* AMBlurView.m in Sources */,
 				D0BD19C117DD660400B0684A /* UIViewController+JASidePanel.m in Sources */,
+				FC3ACB25188CB9A900A31FAF /* BTStop.m in Sources */,
 				D0A67D7917DD0BDE00E271B4 /* BTViewController.m in Sources */,
 				D0BD19BB17DD5E4000B0684A /* JASidePanelController.m in Sources */,
 				D0BD19BE17DD5F6E00B0684A /* BTLeftMenuViewController.m in Sources */,
 				D0A67D7017DD0BDE00E271B4 /* BTAppDelegate.m in Sources */,
 				D0A67D9B17DD0F3D00E271B4 /* BTBus.m in Sources */,
 				D0A67D6C17DD0BDE00E271B4 /* main.m in Sources */,
+				FC3ACB1F188CB79000A31FAF /* BTRoute.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +562,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SRCROOT}/**",
+					/Users/jhill/Desktop/BroncoTransit,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BroncoTransit/BroncoTransit-Prefix.pch";
@@ -563,6 +586,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SRCROOT}/**",
+					/Users/jhill/Desktop/BroncoTransit,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BroncoTransit/BroncoTransit-Prefix.pch";

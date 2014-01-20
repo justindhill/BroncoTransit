@@ -38,23 +38,39 @@
 {
     [super viewDidLoad];
     
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7"))
+    {
+        UIEdgeInsets insets = UIEdgeInsetsZero;
+        insets.top = 20.;
+        self.tableView.contentInset = insets;
+    }
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView reloadData];
     
-    self.tableView.tableHeaderView = self.headerView;
+    
+    self.tableView.backgroundColor = RGBA(71., 48., 25, 1.);
+    
+//    self.tableView.tableHeaderView = self.headerView;
 }
 
 - (UIView *)headerView
 {
     CGRect f = self.view.frame;
-    f.size.height = 64.;
     
-    UIView *header = [[UIView alloc] initWithFrame:f];
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7"))
+        f.origin.y = 20.;
+    
+    f.size.height = 44.;
     
     // the label needs to be centered in 80% the width of the frame because
     // of the cutoff from the center panel
     f.size.width *= .8f;
+    
+    UIView *header = [[UIView alloc] initWithFrame:f];
     
     UILabel *label = [[UILabel alloc] initWithFrame:f];
     label.textAlignment = NSTextAlignmentCenter;
@@ -78,10 +94,19 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"routeMenu"];
         cell.backgroundColor = [UIColor clearColor];
+        cell.textLabel.textColor = [UIColor whiteColor];
+        
+        // for reasons beyond me, you can't simply set the highlighted background color...
+        UIView *bgView = [[UIView alloc] initWithFrame:cell.bounds];
+        bgView.backgroundColor = RGBA(81, 58, 35, 1.);
+        
+        [cell setSelectedBackgroundView:bgView];
+        
     }
     
-    NSDictionary *route = self.routes[indexPath.row];
-    cell.textLabel.text = route[@"title"];
+    BTRoute *route = [[BTRoute alloc] initWithInfoDictionary:self.routes[indexPath.row]];
+    cell.textLabel.text = route.name;
+    cell.imageView.image = route.icon;
     return cell;
 }
 

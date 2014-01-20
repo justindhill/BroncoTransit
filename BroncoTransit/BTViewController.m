@@ -11,8 +11,10 @@
 #import "BTBus.h"
 
 @interface BTViewController () {
-    BTBus *annotation;
-    BOOL shouldFocusPin;
+    BTBus *_annotation;
+    BTRoute *_route;
+    BOOL _shouldFocusPin;
+    CLLocationManager *_locationManager;
 }
 
 @end
@@ -36,13 +38,16 @@
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor] };
     
+    // blur view for distance indicator
+    self.distanceContainer.blurTintColor = RGBA(51., 25., 0., 1.);
+    
     // pan recognizer
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didPan)];
     pan.delegate = self;
     [self.mapView addGestureRecognizer:pan];
     
     // defaults
-    shouldFocusPin = YES;
+    _shouldFocusPin = YES;
     self.resumeButtonOutlet.hidden = YES;
     
     // the brown route
@@ -51,10 +56,12 @@
 
 - (void)busCoordinatesDidChange:(id)sender {
     BTBus *src = (BTBus *)sender;
-    NSLog(@"%@: got new bus coordinates: %f, %f", src.title, annotation.coordinate.latitude, annotation.coordinate.longitude);
+    NSLog(@"%@: got new bus coordinates: %f, %f", src.title, _annotation.coordinate.latitude, _annotation.coordinate.longitude);
     
-    if (shouldFocusPin) {
-        [self.mapView animateToLocation:annotation.coordinate];
+    [self updateClosestStop];
+    
+    if (_shouldFocusPin) {
+        [self.mapView animateToLocation:_annotation.coordinate];
     }
 }
 
@@ -63,26 +70,48 @@
 }
 
 - (void)didPan {
-    shouldFocusPin = NO;
+    _shouldFocusPin = NO;
     self.resumeButtonOutlet.hidden = NO;
 }
 
 - (IBAction)resumeButton:(id)sender {
-    shouldFocusPin = YES;
+    _shouldFocusPin = YES;
     [self busCoordinatesDidChange:self];
     self.resumeButtonOutlet.hidden = YES;
 }
 
 - (void)switchRoute:(NSNumber *)routeIndex {
     BTAppDelegate *d = (BTAppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSDictionary *route = d.routes[routeIndex.intValue];
-    [annotation stopReceivingUpdates];
-    annotation = nil;
+    _route = [[BTRoute alloc] initWithInfoDictionary:d.routes[routeIndex.intValue]];
+    [_annotation stopReceivingUpdates];
+    _annotation = nil;
     
-    BTBus *bus = [[BTBus alloc] initWithDelegate:self map:self.mapView andRouteInfo:route];
+    BTBus *bus = [[BTBus alloc] initWithDelegate:self map:self.mapView andRoute:_route];
     [bus beginReceivingUpdates];
-    self.navigationItem.title = route[@"title"];
-    shouldFocusPin = YES;
-    annotation = bus;
+    self.navigationItem.title = _route.name;
+    _shouldFocusPin = YES;
+    _annotation = bus;
+}
+
+- (void)updateClosestStop
+{
+    CLLocation *loc = _mapView.myLocation;
+    CGPoint coords = CGPointMake(loc.coordinate.longitude, loc.coordinate.latitude);
+    BTStop *stop = [_route closestStopToCoordinates:coords];
+    float distance = [stop distanceToCoordinates:coords];
+    
+    self.stopNameLabel.text = [NSString stringWithFormat:@"%@ (%@)", stop.name, [self displayTextForDistanceInMiles:distance]];
+};
+
+- (NSString *)displayTextForDistanceInMiles:(float)miles
+{
+    if (miles < .5)
+    {
+        return [NSString stringWithFormat:@"%i ft", (int)(miles * 5280)];
+    }
+    else
+    {
+        return [NSString stringWithFormat:@"%.1lf miles", miles];
+    }
 }
 @end
