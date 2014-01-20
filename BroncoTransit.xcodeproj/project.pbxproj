@@ -52,7 +52,7 @@
 		FC3ACB17188CA22F00A31FAF /* AMBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3ACB16188CA22F00A31FAF /* AMBlurView.m */; };
 		FC3ACB1C188CA93C00A31FAF /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3ACB1B188CA93C00A31FAF /* Reveal.framework */; };
 		FC3ACB1F188CB79000A31FAF /* BTRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3ACB1E188CB79000A31FAF /* BTRoute.m */; };
-		FC3ACB25188CB9A900A31FAF /* BTStop.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3ACB24188CB9A900A31FAF /* BTStop.m */; };
+		FC3ACB29188CE87800A31FAF /* BTStop.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3ACB28188CE87800A31FAF /* BTStop.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,8 +153,8 @@
 		FC3ACB1B188CA93C00A31FAF /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		FC3ACB1D188CB79000A31FAF /* BTRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRoute.h; sourceTree = "<group>"; };
 		FC3ACB1E188CB79000A31FAF /* BTRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRoute.m; sourceTree = "<group>"; };
-		FC3ACB23188CB9A900A31FAF /* BTStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTStop.h; sourceTree = "<group>"; };
-		FC3ACB24188CB9A900A31FAF /* BTStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTStop.m; sourceTree = "<group>"; };
+		FC3ACB27188CE87800A31FAF /* BTStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTStop.h; sourceTree = "<group>"; };
+		FC3ACB28188CE87800A31FAF /* BTStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTStop.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,8 +214,6 @@
 		D0A67D5317DD0BDD00E271B4 = {
 			isa = PBXGroup;
 			children = (
-				FC3ACB23188CB9A900A31FAF /* BTStop.h */,
-				FC3ACB24188CB9A900A31FAF /* BTStop.m */,
 				D0A67D6517DD0BDE00E271B4 /* BroncoTransit */,
 				D068127D17DD91B0003FEA1C /* Third-party classes */,
 				D0A67D5E17DD0BDD00E271B4 /* Frameworks */,
@@ -268,13 +266,9 @@
 				D068128317DD9770003FEA1C /* BTSidePanelViewController.m */,
 				D0A67D7717DD0BDE00E271B4 /* BTViewController.h */,
 				D0A67D7817DD0BDE00E271B4 /* BTViewController.m */,
-				FC3ACB1D188CB79000A31FAF /* BTRoute.h */,
-				FC3ACB1E188CB79000A31FAF /* BTRoute.m */,
 				D0BD19BC17DD5F6E00B0684A /* BTLeftMenuViewController.h */,
 				D0BD19BD17DD5F6E00B0684A /* BTLeftMenuViewController.m */,
-				D0A67D9917DD0F3D00E271B4 /* BTBus.h */,
-				D0A67D9A17DD0F3D00E271B4 /* BTBus.m */,
-				D031D82717DD203300CC119E /* BTBusDelegate.h */,
+				FC3ACB26188CE84400A31FAF /* Models */,
 				D0A67D7117DD0BDE00E271B4 /* Main_iPhone.storyboard */,
 				D0A67D7417DD0BDE00E271B4 /* Main_iPad.storyboard */,
 				D0A67D7A17DD0BDE00E271B4 /* Images.xcassets */,
@@ -311,6 +305,20 @@
 				D0BD19B117DD54CB00B0684A /* logo-brown@2x.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		FC3ACB26188CE84400A31FAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0A67D9917DD0F3D00E271B4 /* BTBus.h */,
+				D0A67D9A17DD0F3D00E271B4 /* BTBus.m */,
+				D031D82717DD203300CC119E /* BTBusDelegate.h */,
+				FC3ACB1D188CB79000A31FAF /* BTRoute.h */,
+				FC3ACB1E188CB79000A31FAF /* BTRoute.m */,
+				FC3ACB27188CE87800A31FAF /* BTStop.h */,
+				FC3ACB28188CE87800A31FAF /* BTStop.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,7 +441,7 @@
 				D068128417DD9770003FEA1C /* BTSidePanelViewController.m in Sources */,
 				FC3ACB17188CA22F00A31FAF /* AMBlurView.m in Sources */,
 				D0BD19C117DD660400B0684A /* UIViewController+JASidePanel.m in Sources */,
-				FC3ACB25188CB9A900A31FAF /* BTStop.m in Sources */,
+				FC3ACB29188CE87800A31FAF /* BTStop.m in Sources */,
 				D0A67D7917DD0BDE00E271B4 /* BTViewController.m in Sources */,
 				D0BD19BB17DD5E4000B0684A /* JASidePanelController.m in Sources */,
 				D0BD19BE17DD5F6E00B0684A /* BTLeftMenuViewController.m in Sources */,

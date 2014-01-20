@@ -38,6 +38,7 @@
 {
     [super viewDidLoad];
     
+    // TODO: Fix autolayout so I don't have to do this...
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7"))
     {
         UIEdgeInsets insets = UIEdgeInsetsZero;
@@ -51,7 +52,6 @@
     self.tableView.dataSource = self;
     [self.tableView reloadData];
     
-    
     self.tableView.backgroundColor = RGBA(71., 48., 25, 1.);
     
 //    self.tableView.tableHeaderView = self.headerView;
@@ -61,8 +61,8 @@
 {
     CGRect f = self.view.frame;
     
-    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7"))
-        f.origin.y = 20.;
+//    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7"))
+//        f.origin.y = 20.;
     
     f.size.height = 44.;
     
