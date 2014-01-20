@@ -52,6 +52,8 @@
     
     // the brown route
     [self switchRoute:@0];
+    
+    [self updateClosestStop];
 }
 
 - (void)busCoordinatesDidChange:(id)sender {
