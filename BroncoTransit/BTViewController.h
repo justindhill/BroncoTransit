@@ -13,10 +13,11 @@
 #import "BTRoute.h"
 
 @interface BTViewController : UIViewController <BTBusDelegate, UIGestureRecognizerDelegate>
-@property (weak, nonatomic) IBOutlet UIButton *resumeButtonOutlet;
+@property (weak, nonatomic) IBOutlet AMBlurView *resumeButtonContainer;
 @property (weak, nonatomic) IBOutlet UILabel *stopNameLabel;
 @property (weak, nonatomic) IBOutlet AMBlurView *distanceContainer;
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *resumeButtonVSpace;
 
 @property (weak, nonatomic) BTRoute *currentRoute;
 

@@ -21,20 +21,34 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKu-1G-mky">
-                                <rect key="frame" x="0.0" y="461" width="105" height="63"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8z-ch-BCS" userLabel="Resume container" customClass="AMBlurView">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKu-1G-mky">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="aHJ-4w-Ccy"/>
+                                        </constraints>
+                                        <state key="normal" title="Resume">
+                                            <color key="titleColor" red="0.64510921556122447" green="0.31971579399284483" blue="0.0049758008131029355" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resumeButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tG4-0q-6iE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="aHJ-4w-Ccy"/>
-                                    <constraint firstAttribute="width" constant="105" id="eWi-lj-gh8"/>
+                                    <constraint firstAttribute="bottom" secondItem="sKu-1G-mky" secondAttribute="bottom" id="4Dh-LV-Zzf"/>
+                                    <constraint firstItem="sKu-1G-mky" firstAttribute="leading" secondItem="i8z-ch-BCS" secondAttribute="leading" id="AkN-Hv-LHl"/>
+                                    <constraint firstAttribute="height" constant="44" id="aKz-uV-292"/>
+                                    <constraint firstItem="sKu-1G-mky" firstAttribute="top" secondItem="i8z-ch-BCS" secondAttribute="top" id="fJS-id-6xd"/>
+                                    <constraint firstAttribute="trailing" secondItem="sKu-1G-mky" secondAttribute="trailing" id="xif-f3-NcR"/>
                                 </constraints>
-                                <state key="normal" title="Resume">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="resumeButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tG4-0q-6iE"/>
-                                </connections>
-                            </button>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nm-kF-mB4" customClass="AMBlurView">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,14 +85,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="sKu-1G-mky" secondAttribute="bottom" constant="44" id="4v2-jy-4TB"/>
+                            <constraint firstItem="i8z-ch-BCS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="0nZ-T8-Nne"/>
                             <constraint firstAttribute="trailing" secondItem="4nm-kF-mB4" secondAttribute="trailing" id="DB5-xp-e0q"/>
                             <constraint firstItem="XGZ-9M-78Y" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="FPz-6f-Vci"/>
                             <constraint firstItem="XGZ-9M-78Y" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="I4E-P9-9UZ"/>
                             <constraint firstAttribute="bottom" secondItem="XGZ-9M-78Y" secondAttribute="bottom" id="JfR-Wc-LdQ"/>
                             <constraint firstAttribute="trailing" secondItem="XGZ-9M-78Y" secondAttribute="trailing" id="OPv-h3-0Yu"/>
                             <constraint firstAttribute="bottom" secondItem="4nm-kF-mB4" secondAttribute="bottom" id="UYS-3x-ibl"/>
-                            <constraint firstItem="sKu-1G-mky" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="gPN-eM-1Q6"/>
+                            <constraint firstAttribute="trailing" secondItem="i8z-ch-BCS" secondAttribute="trailing" id="VFq-au-Eb8"/>
+                            <constraint firstAttribute="bottom" secondItem="i8z-ch-BCS" secondAttribute="bottom" id="Wpe-Ro-qoD"/>
                             <constraint firstItem="4nm-kF-mB4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="mbl-LD-zZo"/>
                         </constraints>
                     </view>
@@ -86,7 +101,8 @@
                     <connections>
                         <outlet property="distanceContainer" destination="4nm-kF-mB4" id="36X-sG-2NQ"/>
                         <outlet property="mapView" destination="XGZ-9M-78Y" id="CR4-sN-QkR"/>
-                        <outlet property="resumeButtonOutlet" destination="sKu-1G-mky" id="eZe-G9-itr"/>
+                        <outlet property="resumeButtonContainer" destination="i8z-ch-BCS" id="vSh-5R-rmp"/>
+                        <outlet property="resumeButtonVSpace" destination="4Dh-LV-Zzf" id="F6u-zx-Deu"/>
                         <outlet property="stopNameLabel" destination="UWD-le-CfP" id="RNw-De-pny"/>
                     </connections>
                 </viewController>

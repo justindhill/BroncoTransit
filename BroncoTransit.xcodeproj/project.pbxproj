@@ -53,6 +53,13 @@
 		FC3ACB1C188CA93C00A31FAF /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3ACB1B188CA93C00A31FAF /* Reveal.framework */; };
 		FC3ACB1F188CB79000A31FAF /* BTRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3ACB1E188CB79000A31FAF /* BTRoute.m */; };
 		FC3ACB29188CE87800A31FAF /* BTStop.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3ACB28188CE87800A31FAF /* BTStop.m */; };
+		FC3D6E33188E068300C46B19 /* bus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3D6E32188E068300C46B19 /* bus@2x.png */; };
+		FC575EA3188DFF7200D32004 /* Launch-iOS6-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = FC575E9D188DFF7200D32004 /* Launch-iOS6-568h.png */; };
+		FC575EA4188DFF7200D32004 /* Launch-iOS6-iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = FC575E9E188DFF7200D32004 /* Launch-iOS6-iPhone.png */; };
+		FC575EA5188DFF7200D32004 /* Launch-iOS6-iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC575E9F188DFF7200D32004 /* Launch-iOS6-iPhone@2x.png */; };
+		FC575EA6188DFF7200D32004 /* Launch-iOS7-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = FC575EA0188DFF7200D32004 /* Launch-iOS7-568h.png */; };
+		FC575EA7188DFF7200D32004 /* Launch-iOS7-iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = FC575EA1188DFF7200D32004 /* Launch-iOS7-iPhone.png */; };
+		FC575EA8188DFF7200D32004 /* Launch-iOS7-iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC575EA2188DFF7200D32004 /* Launch-iOS7-iPhone@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +162,13 @@
 		FC3ACB1E188CB79000A31FAF /* BTRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRoute.m; sourceTree = "<group>"; };
 		FC3ACB27188CE87800A31FAF /* BTStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTStop.h; sourceTree = "<group>"; };
 		FC3ACB28188CE87800A31FAF /* BTStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTStop.m; sourceTree = "<group>"; };
+		FC3D6E32188E068300C46B19 /* bus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus@2x.png"; sourceTree = "<group>"; };
+		FC575E9D188DFF7200D32004 /* Launch-iOS6-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Launch-iOS6-568h.png"; sourceTree = "<group>"; };
+		FC575E9E188DFF7200D32004 /* Launch-iOS6-iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Launch-iOS6-iPhone.png"; sourceTree = "<group>"; };
+		FC575E9F188DFF7200D32004 /* Launch-iOS6-iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Launch-iOS6-iPhone@2x.png"; sourceTree = "<group>"; };
+		FC575EA0188DFF7200D32004 /* Launch-iOS7-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Launch-iOS7-568h.png"; sourceTree = "<group>"; };
+		FC575EA1188DFF7200D32004 /* Launch-iOS7-iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Launch-iOS7-iPhone.png"; sourceTree = "<group>"; };
+		FC575EA2188DFF7200D32004 /* Launch-iOS7-iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Launch-iOS7-iPhone@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +307,7 @@
 		D0BD199917DD4C3500B0684A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FC575E9C188DFF7200D32004 /* Launch images */,
 				D0BD19C217DD710800B0684A /* logo-purple@2x.png */,
 				D0BD19C317DD710800B0684A /* logo-red@2x.png */,
 				D0BD19C417DD710800B0684A /* logo-blue@2x.png */,
@@ -303,6 +318,7 @@
 				D0BD19C917DD710800B0684A /* logo-purple.png */,
 				D0BD19B017DD54CB00B0684A /* logo-brown.png */,
 				D0BD19B117DD54CB00B0684A /* logo-brown@2x.png */,
+				FC3D6E32188E068300C46B19 /* bus@2x.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -319,6 +335,19 @@
 				FC3ACB28188CE87800A31FAF /* BTStop.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		FC575E9C188DFF7200D32004 /* Launch images */ = {
+			isa = PBXGroup;
+			children = (
+				FC575E9D188DFF7200D32004 /* Launch-iOS6-568h.png */,
+				FC575EA2188DFF7200D32004 /* Launch-iOS7-iPhone@2x.png */,
+				FC575E9E188DFF7200D32004 /* Launch-iOS6-iPhone.png */,
+				FC575E9F188DFF7200D32004 /* Launch-iOS6-iPhone@2x.png */,
+				FC575EA0188DFF7200D32004 /* Launch-iOS7-568h.png */,
+				FC575EA1188DFF7200D32004 /* Launch-iOS7-iPhone.png */,
+			);
+			path = "Launch images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,17 +441,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC575EA4188DFF7200D32004 /* Launch-iOS6-iPhone.png in Resources */,
 				D0A67D7617DD0BDE00E271B4 /* Main_iPad.storyboard in Resources */,
 				D0BD19D017DD710800B0684A /* logo-red.png in Resources */,
+				FC575EA5188DFF7200D32004 /* Launch-iOS6-iPhone@2x.png in Resources */,
 				D0BD19CC17DD710800B0684A /* logo-blue@2x.png in Resources */,
 				D0BD19B217DD54CB00B0684A /* logo-brown.png in Resources */,
 				D0BD19D117DD710800B0684A /* logo-purple.png in Resources */,
 				D0A67D7B17DD0BDE00E271B4 /* Images.xcassets in Resources */,
+				FC575EA8188DFF7200D32004 /* Launch-iOS7-iPhone@2x.png in Resources */,
+				FC3D6E33188E068300C46B19 /* bus@2x.png in Resources */,
 				D0A67D7317DD0BDE00E271B4 /* Main_iPhone.storyboard in Resources */,
+				FC575EA6188DFF7200D32004 /* Launch-iOS7-568h.png in Resources */,
+				FC575EA3188DFF7200D32004 /* Launch-iOS6-568h.png in Resources */,
 				D06013E11813790F0031A0BB /* GoogleMaps.bundle in Resources */,
 				D0BD19CA17DD710800B0684A /* logo-purple@2x.png in Resources */,
 				D0D5E66917E6A6120092A122 /* routes.plist in Resources */,
 				D0BD19CB17DD710800B0684A /* logo-red@2x.png in Resources */,
+				FC575EA7188DFF7200D32004 /* Launch-iOS7-iPhone.png in Resources */,
 				D0A67D6A17DD0BDE00E271B4 /* InfoPlist.strings in Resources */,
 				D0BD19CF17DD710800B0684A /* logo-yellow.png in Resources */,
 				D0BD19B317DD54CB00B0684A /* logo-brown@2x.png in Resources */,
@@ -580,6 +616,7 @@
 					"${SRCROOT}/BroncoTransit/Frameworks/TBXML/TBXML-headers",
 				);
 				INFOPLIST_FILE = "BroncoTransit/BroncoTransit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -600,6 +637,7 @@
 				GCC_PREFIX_HEADER = "BroncoTransit/BroncoTransit-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "BroncoTransit/BroncoTransit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

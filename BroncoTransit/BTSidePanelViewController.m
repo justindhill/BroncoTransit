@@ -14,12 +14,6 @@
 
 @implementation BTSidePanelViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    [self setNeedsStatusBarAppearanceUpdate];
-}
-
 - (void)awakeFromNib
 {
     [self setLeftPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"leftViewController"]];

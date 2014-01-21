@@ -34,7 +34,9 @@
     [self setNeedsStatusBarAppearanceUpdate];
     
     // navigation controller
-    self.navigationController.navigationBar.barTintColor = RGBA(51., 25., 0., 1.);
+    
+    if ([self.navigationController.navigationBar respondsToSelector:@selector(setBarTintColor:)])
+        self.navigationController.navigationBar.barTintColor = RGBA(51., 25., 0., 1.);
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor] };
     
@@ -48,7 +50,7 @@
     
     // defaults
     _shouldFocusPin = YES;
-    self.resumeButtonOutlet.hidden = YES;
+    self.resumeButtonContainer.hidden = YES;
     
     // the brown route
     [self switchRoute:@0];
@@ -73,13 +75,26 @@
 
 - (void)didPan {
     _shouldFocusPin = NO;
-    self.resumeButtonOutlet.hidden = NO;
+    if (self.resumeButtonContainer.hidden == YES)
+    {
+        self.resumeButtonContainer.hidden = NO;
+        self.resumeButtonVSpace.constant = 44.;
+        [self.view setNeedsUpdateConstraints];
+        
+        [UIView animateWithDuration:.2 animations:^{
+            [self.view layoutIfNeeded];
+        }];
+    }
 }
 
 - (IBAction)resumeButton:(id)sender {
     _shouldFocusPin = YES;
     [self busCoordinatesDidChange:self];
-    self.resumeButtonOutlet.hidden = YES;
+    
+    [UIView animateWithDuration:.2 animations:^{
+        self.resumeButtonVSpace.constant = 0.;
+    }];
+    self.resumeButtonContainer.hidden = YES;
 }
 
 - (void)switchRoute:(NSNumber *)routeIndex {
