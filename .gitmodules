@@ -1,6 +1,3 @@
-[submodule "BroncoTransit/Frameworks/TBXML"]
-	path = BroncoTransit/Frameworks/TBXML
-	url = git@github.com:71squared/TBXML.git
 [submodule "BroncoTransit/Frameworks/JASidePanels"]
 	path = BroncoTransit/Frameworks/JASidePanels
 	url = git@github.com:gotosleep/JASidePanels.git

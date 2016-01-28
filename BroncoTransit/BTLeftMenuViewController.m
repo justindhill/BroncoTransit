@@ -7,8 +7,8 @@
 //
 
 #import "BTLeftMenuViewController.h"
-#import "JASidePanelController.h"
-#import "UIViewController+JASidePanel.h"
+#import <JASidePanels/JASidePanelController.h>
+#import "JASidePanels/UIViewController+JASidePanel.h"
 #import "BTViewController.h"
 
 @interface BTLeftMenuViewController () {
